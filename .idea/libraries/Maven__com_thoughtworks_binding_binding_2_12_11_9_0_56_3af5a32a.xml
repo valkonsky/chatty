@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.thoughtworks.binding:binding_2.12:11.9.0+56-3af5a32a">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/binding/binding_2.12/11.9.0+56-3af5a32a/binding_2.12-11.9.0+56-3af5a32a.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/binding/binding_2.12/11.9.0+56-3af5a32a/binding_2.12-11.9.0+56-3af5a32a-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/binding/binding_2.12/11.9.0+56-3af5a32a/binding_2.12-11.9.0+56-3af5a32a-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
