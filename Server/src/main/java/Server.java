@@ -1,43 +1,28 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Server {
+    private static ServerSocket server;
+    private static Socket socket;
+    private final int PORT= 8189;
 
-    public static void main(String[] args) {
-        Socket socket = null;
-        Scanner scanner = new Scanner(System.in);
-        try(ServerSocket serverSocket = new ServerSocket(8189)){
-            System.out.println("server running...");
-            socket = serverSocket.accept();
-            System.out.println("Client connected");
-            DataInputStream in = new DataInputStream(socket.getInputStream());
-            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+    private List<ClientHandler> clients;
+    private AuthService authService;
 
-            Thread thread = new Thread(()->{
-                while (true){
-                    try {
-                        out.writeUTF(scanner.nextLine());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-            });
-
-            thread.setDaemon(true);
-            thread.start();
+    public Server() {
+        clients = new CopyOnWriteArrayList<>();
+        authService = new SimpleAuthService();
+        try {
+            server = new ServerSocket(PORT);
+            System.out.println("server started");
 
             while(true){
-                String str = in.readUTF();
-                if (str.equals("/end")){
-                    System.out.println("client disconnected");
-                    out.writeUTF("/end");
-                    break;
-                }else{
-                    System.out.println("Client: " +str);
-                }
+                socket = server.accept();
+                System.out.println("Client connected");
+                new ClientHandler(this,socket);
             }
 
         } catch (IOException e) {
@@ -45,9 +30,33 @@ public class Server {
         }finally {
             try {
                 socket.close();
-            } catch (IOException | NullPointerException e) {
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                server.close();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void broadcastMsg(ClientHandler sender, String msg){
+       String message = String.format("[ %s ]: %s", sender.getNickname(), msg);
+
+        for (ClientHandler client : clients) {
+            client.sendMsg(msg);
+        }
+    }
+
+    public void subscribe(ClientHandler clientHandler){
+        clients.add(clientHandler);
+    }
+
+    public void unsubscribe(ClientHandler clientHandler){
+        clients.remove(clientHandler);
+    }
+    public AuthService getAuthService() {
+        return authService;
     }
 }
