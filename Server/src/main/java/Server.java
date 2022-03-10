@@ -45,8 +45,25 @@ public class Server {
        String message = String.format("[ %s ]: %s", sender.getNickname(), msg);
 
         for (ClientHandler client : clients) {
-            client.sendMsg(msg);
+            client.sendMsg(message);
         }
+    }
+
+    public void privateMsg(ClientHandler sender,String recipient, String msg){
+        String message = String.format("from [ %s ] to [ %s ]: %s", sender.getNickname(),recipient, msg);
+
+        for (ClientHandler client : clients) {
+            if (client.getNickname().equals(recipient)){
+                client.sendMsg(message);
+                if (!sender.getNickname().equals(recipient)) {
+                    sender.sendMsg(message);
+                }
+                return;
+            }
+
+        }
+
+        sender.sendMsg("user not found:" + recipient);
     }
 
     public void subscribe(ClientHandler clientHandler){

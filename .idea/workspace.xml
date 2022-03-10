@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d260ea1-2552-4a55-bada-983f73900d3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/SimpleAuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/StartServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/SimpleAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/SimpleAuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/Server.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646525502805</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="work from lesson 7">
+      <created>1646839660802</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1646839660802</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +207,7 @@
     <MESSAGE value="lesson 7 first code" />
     <MESSAGE value="lesson add javafx view (not worked)" />
     <MESSAGE value="fix javafx problem from view" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix javafx problem from view" />
+    <MESSAGE value="work from lesson 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="work from lesson 7" />
   </component>
 </project>
