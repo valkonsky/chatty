@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Client" />
         <module name="Server" />
+        <module name="Command" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Chatty" target="8" />
       <module name="Client" target="8" />
+      <module name="Command" target="11" />
       <module name="Server" target="8" />
     </bytecodeTargetLevel>
   </component>
