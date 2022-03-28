@@ -14,7 +14,8 @@ public class Server {
 
     public Server() {
         clients = new CopyOnWriteArrayList<>();
-        authService = new SimpleAuthService();
+        //authService = new SimpleAuthService();
+        authService = new SqliteAuthService();
         try {
             server = new ServerSocket(PORT);
             System.out.println("server started");

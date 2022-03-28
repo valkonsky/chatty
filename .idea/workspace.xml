@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d260ea1-2552-4a55-bada-983f73900d3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/main/java/RegController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/main/resources/reg.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Command/Command.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Command/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Command/src/main/java/constants/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_36_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/SqliteAuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chatty.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chatty.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/AuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/SimpleAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/SimpleAuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -85,7 +72,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Client/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -125,6 +112,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SqliteAuthService" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SqliteAuthService" />
+      <module name="Server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StartServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="StartServer" />
       <module name="Server" />
@@ -142,11 +136,13 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.StartServer" />
+      <item itemvalue="Application.SqliteAuthService" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StartServer" />
+        <item itemvalue="Application.SqliteAuthService" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Client" />
       </list>
@@ -203,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646839660802</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add Commands and add authentication on form">
+      <created>1647828285514</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647828285515</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +228,7 @@
     <MESSAGE value="lesson add javafx view (not worked)" />
     <MESSAGE value="fix javafx problem from view" />
     <MESSAGE value="work from lesson 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="work from lesson 7" />
+    <MESSAGE value="add Commands and add authentication on form" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Commands and add authentication on form" />
   </component>
 </project>
