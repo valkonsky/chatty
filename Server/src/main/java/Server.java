@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -14,8 +15,11 @@ public class Server {
 
     public Server() {
         clients = new CopyOnWriteArrayList<>();
-        //authService = new SimpleAuthService();
-        authService = new SqliteAuthService();
+
+        if (!SQLHandler.connect()){
+            throw new RuntimeException("access to database aborted");
+        }
+        authService = new DBAuthService();
         try {
             server = new ServerSocket(PORT);
             System.out.println("server started");
@@ -29,6 +33,7 @@ public class Server {
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
+            SQLHandler.disconnect();
             try {
                 socket.close();
             } catch (IOException e) {

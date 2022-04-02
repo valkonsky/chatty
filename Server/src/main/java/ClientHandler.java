@@ -101,6 +101,25 @@ public class ClientHandler {
                                 server.privateMsg(this,token[1],token[2]);
                             }
 
+                            if (str.startsWith(Command.CHANGENICK)){
+                                String[] token = str.split("\\s+",2);
+                                if (token.length<2){
+                                    continue;
+                                }
+                                if (token[1].contains(" ")){
+                                    sendMsg("nick doesn't contain space simbols");
+                                    continue;
+                                }
+                                if (server.getAuthService().changeNickname(this.nickname,token[1])){
+                                    sendMsg("/yournickis " + token[1]);
+                                    sendMsg("your nick updated to " + token[1]);
+                                    this.nickname = token[1];
+                                    server.broadcastClientList();
+                                }else{
+                                    sendMsg("can't update nick. This nick is busy");
+                                }
+                            }
+
                         }else {
                             server.broadcastMsg(this, str);
                         }

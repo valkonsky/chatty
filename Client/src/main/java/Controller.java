@@ -24,8 +24,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-
-
     @FXML
     public TextField textField;
     @FXML
@@ -135,8 +133,11 @@ public class Controller implements Initializable {
                                     }
                                 });
                             }
-                        }
-                        else{
+                            if (str.startsWith(Command.YOURNICKIS)){
+                                nickname = str.split(" ")[1];
+                                setTitle(nickname);
+                            }
+                        } else{
                         textArea.appendText(str + "\n");
                         }
                     }
