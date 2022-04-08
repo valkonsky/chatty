@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d260ea1-2552-4a55-bada-983f73900d3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/DBAuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/main/java/History.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Command/src/main/java/constants/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/Command/src/main/java/constants/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/SimpleAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/SimpleAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/SqliteAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/SQLHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/StartServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/StartServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/Server.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,6 +50,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25l1nhggSJTjo48gPkuA48pYN7k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -219,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648467015982</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix registration error">
+      <created>1648899327288</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648899327288</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +231,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lesson 6 chatty" />
@@ -243,6 +241,7 @@
     <MESSAGE value="work from lesson 7" />
     <MESSAGE value="add Commands and add authentication on form" />
     <MESSAGE value="add SqliteAuthService.java and realize interaction to database" />
-    <option name="LAST_COMMIT_MESSAGE" value="add SqliteAuthService.java and realize interaction to database" />
+    <MESSAGE value="fix registration error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix registration error" />
   </component>
 </project>
