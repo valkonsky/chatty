@@ -4,6 +4,9 @@ import java.net.Socket;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Server {
     private static ServerSocket server;
@@ -13,7 +16,14 @@ public class Server {
     private List<ClientHandler> clients;
     private AuthService authService;
 
+    public ExecutorService getExecutorService() {
+        return executorService;
+    }
+
+    private ExecutorService executorService;
+
     public Server() {
+        executorService = Executors.newCachedThreadPool();
         clients = new CopyOnWriteArrayList<>();
 
         if (!SQLHandler.connect()){
@@ -33,6 +43,7 @@ public class Server {
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
+            executorService.shutdown();
             SQLHandler.disconnect();
             try {
                 socket.close();
