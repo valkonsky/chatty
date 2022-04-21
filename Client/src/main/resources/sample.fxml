@@ -1,0 +1,36 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<VBox fx:controller="Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
+
+<HBox fx:id="authPanel">
+    <TextField fx:id="loginField" HBox.hgrow="ALWAYS" promptText="login"/>
+    <PasswordField fx:id="passwordField" HBox.hgrow="ALWAYS" promptText="password"/>
+    <Button text="auth" onAction="#tryToAuth"/>
+    <Button text="reg" onAction="#tryToReg"/>
+</HBox>
+    <stylesheets>
+        <URL value="@/css/style.css"/>
+    </stylesheets>
+
+<HBox VBox.vgrow="ALWAYS">
+
+    <TextArea fx:id="textArea" HBox.hgrow="ALWAYS" editable="false"/>
+    <ListView fx:id="clientList" managed="false" visible="false" minWidth="150" onMouseReleased="#clientListMouseAction"/>
+</HBox>
+<HBox fx:id="msgPanel" visible="false" managed="false">
+    <Button text="send" onAction="#sendMsg"/>
+    <TextField fx:id="textField" HBox.hgrow="ALWAYS" promptText="Input text" onAction="#sendMsg"/>
+
+</HBox>
+</VBox>

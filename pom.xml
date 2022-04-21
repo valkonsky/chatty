@@ -11,11 +11,11 @@
     <modules>
         <module>Client</module>
         <module>Server</module>
+        <module>Command</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
 </project>
