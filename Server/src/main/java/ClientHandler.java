@@ -5,9 +5,11 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
+import java.util.logging.Logger;
 
 public class ClientHandler {
 
+    private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
     private Server server;
     private Socket socket;
     private DataInputStream in;
@@ -57,6 +59,7 @@ public class ClientHandler {
                                         sendMsg(Command.AUTH_OK + " "+ nickname);
                                         authenticated = true;
                                         server.subscribe(this);
+                                        logger.info("Client " + nickname+ " authenticated");
                                         break;
                                     }
                                     if (str.equals(Command.REG_OK)|| str.equals(Command.REG_NO)){
